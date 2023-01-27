@@ -2,7 +2,7 @@ package Queue;
 
 /**
  * 
- * @author Mohammad J Teeti
+ * @author Mohammad J. Teeti
  * @version 1.1
  * Simple Implemtation of the LinkedQueue ADT 
  * {@code Node} is implemented as Inner Class
@@ -51,7 +51,7 @@ public class LinkedQueue <T>{
     /**
      * removes a value from the head of the queue
      * @return value of the head ,null if queue is empty
-     */
+    */
     public T Pop(){
 
         if (head==null){
@@ -65,8 +65,9 @@ public class LinkedQueue <T>{
 
     /**
      * Recursion is used to inverse Queue display from rear to head 
-     */
-     
+     * 
+     * 
+    */
     public void display(Node head){
 
         if (head ==null)
