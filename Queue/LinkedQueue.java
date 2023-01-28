@@ -60,6 +60,7 @@ public class LinkedQueue <T>{
         }
         Node temp =head;
         head=head.next;
+        temp.next=null;//remove the previous head from memory
         return temp.value;
     }
 
@@ -78,5 +79,8 @@ public class LinkedQueue <T>{
         
     }
     
+    boolean isEmpty(){
+        return rear==null;
+    }
 
 }
