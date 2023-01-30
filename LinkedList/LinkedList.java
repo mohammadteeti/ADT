@@ -58,7 +58,7 @@ public class LinkedList<T> {
 
         length++;
         return;
-        
+
 
 
 
@@ -89,7 +89,7 @@ public class LinkedList<T> {
 
         }
 
-        if(head==tail){
+        if(head==tail){ //solve for one Element list 
             Node temp=head;
             head=tail=null;
             System.out.println(temp.value+ " Deleted");
