@@ -27,6 +27,15 @@ public class LinkedListTest {
         System.out.println("-----------------");
         System.out.println(list.search(11));
 
+        System.out.println("-----------------");
+        list.deleteFromBegining();
+        list.deleteFromBegining();
+        list.deleteFromBegining();
+        list.deleteFromBegining();
+        list.deleteFromBegining();
+
+
+
 
 
 
