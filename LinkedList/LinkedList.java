@@ -25,7 +25,8 @@ public class LinkedList<T> {
         length=0;
     };
 
-    public void add (T value){
+    
+    public void add (T value){// adds Element to the end of the list
 
         if (head ==null){
             head = new Node(value,null);
@@ -41,6 +42,28 @@ public class LinkedList<T> {
 
     }
 
+    public void addAtBeggining(T value){
+
+        Node newNode= new Node(value, null);
+        if (head == null){
+            head= newNode;
+            tail=head;
+            length++;
+            return;
+
+        }
+
+        newNode.next=head;
+        head=newNode;
+
+        length++;
+        return;
+        
+
+
+
+    }
+
     public Node deleteFromBegining (){
 
         if (head == null){
@@ -53,6 +76,7 @@ public class LinkedList<T> {
         temp.next=null;// either we left it to gc to destroty the node 
                         //or we can assign it to null from here ,but return nothing 
         length--;
+        System.out.println(temp.value +" Deleted");
         return temp;
 
     }
@@ -65,15 +89,24 @@ public class LinkedList<T> {
 
         }
 
-        Node n=head;
-        while(n.next.next!=null){
+        if(head==tail){
+            Node temp=head;
+            head=tail=null;
+            System.out.println(temp.value+ " Deleted");
+            return temp;
 
+        }
+
+        Node n=head;
+        while(n.next!=null){
+            tail=n;
             n=n.next;
         }
-        Node temp=n.next;//to be deleted 
-        tail=n;
-        n.next=null;
+        Node temp=n;//to be deleted 
+        tail.next=null;
+        n=null;
         length--;
+        System.out.println(temp.value + "Deleted ");
         return temp;
 
     }
