@@ -1,5 +1,7 @@
 package LinkedList;
 
+import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+
 public class LinkedList<T> {
 
     
@@ -111,6 +113,45 @@ public class LinkedList<T> {
 
     }
 
+    public void delete(T value){
+        if(isEmpty()){
+            return;
+        }
+
+        Node current=head;
+        Node prev=current;
+
+        while(current.value!=value){
+            prev=current;
+            current=current.next;
+        }
+        prev.next=current.next;
+        current.next=null;
+
+        
+    }
+
+    public Node getMiddleNode(){
+
+        if (isEmpty()){
+            return null;
+        }
+        
+        Node current =head;
+        Node prev = current;
+        int c=1;
+        while(current!=null){
+            if(c%2==0)
+                prev=prev.next;
+               
+                
+            current=current.next;
+            c++;
+            
+        }
+
+        return prev;
+    }
     public int search (T value ){
         int index=0;
         if (isEmpty()){
