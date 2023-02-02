@@ -1,6 +1,7 @@
 package LinkedList;
 
-import javax.xml.crypto.dsig.keyinfo.RetrievalMethod;
+import java.util.ArrayList;
+import java.util.List;
 
 public class LinkedList<T> {
 
@@ -174,6 +175,67 @@ public class LinkedList<T> {
         return n!=null? index:-1;
 
     }
+
+    public void printReverse(Node head ){
+
+        if (head == null)
+            return ;
+        
+        //this prints list in reverse 
+        //but dosnt reverse the list structure 
+        printReverse(head.next);
+        System.out.println(head.value);
+        
+
+    }
+
+    /**
+     * Recursive method to inverse the LinkedList
+     * it first moves the tail to the beggining on the first call where the 
+     * current Node is the head Node then 
+     * once the recursion reaches the base code where the next node is null
+     * it assignes the new head of the List to the previous Node (Which is the End of the Original List)
+     * @param current
+     * @param prev
+     * @return Node : the Node that preceedes the current Node in each iteration
+     */
+    public Node reverseByRecursion(Node current,Node prev){
+
+        //moves the tail to the beginnering on the first call
+        if(head == current ){
+            tail=head;
+        }
+        if(current==null){
+            head=prev;
+            return prev;
+        }
+        
+        reverseByRecursion(current.next,current).next=prev;
+        return prev;
+
+    }
+    
+
+    public void reverse(){
+        if (isEmpty())
+            return;
+
+        Node curr=head;
+        Node prev=null;
+        Node nextNode=curr.next;
+
+        while(nextNode!=null){
+            curr.next=prev;
+            prev=curr;
+            curr=nextNode;
+            nextNode=nextNode.next;
+        }
+
+        curr.next=prev;
+        head=curr;
+    }
+
+
 
     public void addAt(int index,T value){
       if(index<0 || index >=length ){
