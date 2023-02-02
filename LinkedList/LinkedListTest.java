@@ -74,6 +74,42 @@ public class LinkedListTest {
             System.out.println("Middle Value = " + list.getMiddleNode().value);
 
 
+        System.out.println("Reverse List");
+        list.reverse();
+        list.display();
+
+
+        LinkedList<Character> list2= new LinkedList<Character>();
+        list2.add('A');
+        list2.add('B');
+        list2.add('C');
+        list2.add('D');
+
+        System.out.println("-----------\nBefore Inversion : ");
+        list2.display();
+        
+        System.out.println("-----------\nReverse in recursion");
+        list2.reverseByRecursion(list2.head,null);
+
+        list2.display();
+
+
+        LinkedList<String> list3 = new LinkedList<String>();
+
+        list3.add("Mohammad");
+        list3.add("Ahmad");
+        list3.add("Khalid");
+        list3.add("Rami");
+        list3.add("Abed");
+
+        System.out.println("Before Inversion");
+        list3.display();
+
+        System.out.println("After Inversion By Recursion");
+        list3.reverseByRecursion(list3.head, null);
+        
+        list3.display();
+
 
 
 
