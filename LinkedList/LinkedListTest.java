@@ -107,14 +107,26 @@ public class LinkedListTest {
 
         System.out.println("After Inversion By Recursion");
         list3.reverseByRecursion(list3.head, null);
-        
+
         list3.display();
 
 
 
+        System.out.println("Test DoublyLinkedList");
+        
+        DoublyLinkedList<String> list4 = new DoublyLinkedList<>();
+        list4.add("A1");
+        list4.add("A2");
+        list4.add("A3");
+        list4.add("A4");
+        list4.add("A5");
 
+        System.out.println("Display in Order");
+        list4.display();
 
-
+        System.out.println("Display in reverse");
+        list4.displayInReverse();
+        
 
 
 
