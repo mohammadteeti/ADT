@@ -42,8 +42,8 @@ public class TreeTest {
 
         bst.preOrder(bst.root);
 
-        bst.search(27, bst.root);
-        
+        bst.search(654, bst.root);
+
 
 
         
