@@ -51,6 +51,32 @@ public class BinarySearchTree {
     }
 
 
+    void search (int val,Node n){
+        if (root == null){
+            System.out.println("Not Found ");
+            return;
+        }
+
+        if (val == n.value){
+            
+            System.out.print("Found at\t");
+            System.out.println(n.toString().split("@")[1]);
+            return;
+        }
+        else if (val<n.value){
+            search(val, n.left);
+            
+        }
+        else {
+            search(val, n.right);
+        }
+
+        }
+
+
+
+    
+
     /**
      * Views the elements of the tree in preOrder Traversal  recursively
      * @param r initially the root of the tree
@@ -59,7 +85,9 @@ public class BinarySearchTree {
         if(r==null)
             return;
         
-        System.out.println(r.value);
+        System.out.print(r.value+"\t");
+        System.out.print(r.toString().split("@")[1]);
+        System.out.println();
         preOrder(r.left);
         preOrder(r.right);
 
