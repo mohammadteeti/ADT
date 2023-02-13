@@ -51,6 +51,12 @@ public class BinarySearchTree {
     }
 
 
+    /**
+     * Search method ,searches for a specific value in the binary tree
+     * recursively traverse through tree depth 
+     * @param val the value to search for 
+     * @param n  initially the tree root 
+     */
     void search (int val,Node n){
         if (root == null){
             System.out.println("Not Found ");
@@ -64,13 +70,22 @@ public class BinarySearchTree {
             return;
         }
         else if (val<n.value){
-            search(val, n.left);
-            
+            if(n.left!=null)
+                search(val, n.left);
+            else {
+                System.out.println("Not found");
+                return;
+            }
         }
         else {
-            search(val, n.right);
+            if(n.right!=null)
+                search(val, n.right);
+            else {
+                System.out.println("Not found");
+                return;
+            }
         }
-
+            
         }
 
 
