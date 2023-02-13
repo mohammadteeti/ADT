@@ -7,7 +7,7 @@ public class InfixToPostfixTest {
     
     @Test
     public void isNumberTest(){
-
+        
         //test for numbers
         for (int i = 48 ;i<58;i++){
             System.out.println("Test for Numbers");
