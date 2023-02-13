@@ -28,6 +28,22 @@ public class TreeTest {
         t.levelOrder(t.root);
 
 
+        System.out.println("##########################3");
+
+        BinarySearchTree bst = new BinarySearchTree();
+
+        bst.add(45, bst.root);
+        bst.add(30, bst.root);
+        bst.add(88, bst.root);
+        bst.add(27, bst.root);
+        bst.add(60, bst.root);
+        bst.add(100, bst.root);
+        bst.add(7, bst.root);
+
+        bst.preOrder(bst.root);
+
+
+
         
 
 
