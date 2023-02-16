@@ -45,12 +45,50 @@ public class TreeTest {
         bst.search(654, bst.root);
 
 
-
+        System.out.println("get depth ");
+        System.out.println(bst.getDepth(bst.root));
+        System.out.println("Find Minimum ");
+        System.out.println(BinarySearchTree.min(bst.root).value);
         
+        
+        bst=null;
+        bst=new BinarySearchTree();
+        bst.add(45, bst.root);
+        bst.add(50, bst.root);
+        bst.add(30, bst.root);
+        bst.add(80, bst.root);
+        System.out.println("Values : ");
+        bst.preOrder(bst.root);
+        System.out.println("get depth ");
+        System.out.println(bst.getDepth(bst.root));
+        
+        System.out.println("Delete Value");
+        //bst.delete(45, null,bst.root);
 
+        bst.preOrder(bst.root);
 
+        System.out.println("Find Minimum ");
+        System.out.println(BinarySearchTree.min(bst.root).value);
+        System.out.println("min\t"+bst.minRec(bst.root));
 
+        bst=new BinarySearchTree();
+        bst.add(5, bst.root);
+        bst.add(0, bst.root);
+        bst.add(90, bst.root);
+        bst.add(2, bst.root);
+        bst.add(1, bst.root);
+
+        System.out.println("Find Minimum ");
+        System.out.println(BinarySearchTree.min(bst.root).value);
+
+        System.out.println("min\t"+bst.minRec(bst.root));
 
     }
+
+
     
 }
+
+
+
+
